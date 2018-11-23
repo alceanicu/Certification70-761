@@ -1,3 +1,4 @@
+
 SELECT Category, COUNT(ProductID) AS Products
 FROM
 	(SELECT p.ProductID, p.Name AS Product, c.Name AS Category

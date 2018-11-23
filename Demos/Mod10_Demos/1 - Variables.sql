@@ -2,7 +2,7 @@
 DECLARE @City VARCHAR(20)='Toronto'
 Set @City='Bellevue'
 
-
+--GO
 
 Select FirstName +' '+LastName as [Name],AddressLine1 as Address,City
 FROM SalesLT.Customer as C

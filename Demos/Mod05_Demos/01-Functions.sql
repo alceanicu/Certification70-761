@@ -27,16 +27,15 @@ SELECT Name, ProductNumber, LEFT(ProductNumber, 2) AS ProductType,
 							SUBSTRING(ProductNumber, LEN(ProductNumber) - CHARINDEX('-', REVERSE(RIGHT(ProductNumber, 3))) + 2, 2) AS SizeCode
 FROM SalesLT.Product;
 
-
 -- Logical functions
 SELECT Name, Size AS NumericSize
 FROM SalesLT.Product
 WHERE ISNUMERIC(Size) = 1;
 
-SELECT Name, IIF(ProductCategoryID IN (5,6,7), 'Bike', 'Other') ProductType
+SELECT Name, ProductCategoryID, IIF(ProductCategoryID IN (5,6,7), 'Bike', 'Other') ProductType
 FROM SalesLT.Product;
 
-SELECT Name, IIF(ISNUMERIC(Size) = 1, 'Numeric', 'Non-Numeric') SizeType
+SELECT Name, Size, IIF(ISNUMERIC(Size) = 1, 'Numeric', 'Non-Numeric') SizeType
 FROM SalesLT.Product;
 
 SELECT prd.Name AS ProductName, cat.Name AS Category,
@@ -44,7 +43,6 @@ SELECT prd.Name AS ProductName, cat.Name AS Category,
 FROM SalesLT.Product AS prd
 JOIN SalesLT.ProductCategory AS cat
 ON prd.ProductCategoryID = cat.ProductCategoryID;
-
 
 -- Window functions
 SELECT TOP(100) ProductID, Name, ListPrice,

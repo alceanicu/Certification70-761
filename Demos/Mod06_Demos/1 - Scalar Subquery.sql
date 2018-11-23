@@ -3,7 +3,7 @@
 SELECT MAX(UnitPrice) FROM SalesLT.SalesOrderDetail
 
 SELECT * from SalesLT.Product
-WHERE ListPrice >
+WHERE ListPrice > 1466.01
 
 
 SELECT * from SalesLT.Product
