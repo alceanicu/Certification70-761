@@ -5,7 +5,7 @@ GO
 USE SqlhintsTemporalDemoDB
 GO
 --Create Temporal Table dbo.Customer
-CREATE TABLE dbo.Customer 
+CREATE TABLE dbo.Customer
 (  
   Id INT NOT NULL PRIMARY KEY CLUSTERED,
   Name NVARCHAR(100) NOT NULL, 

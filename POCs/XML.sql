@@ -10,15 +10,6 @@ FOR XML PATH('Product'), ROOT ('Products')
 
 -------------------------------------------- Gerando XML 2
 select
-	ProductID,
-	Name,
-	ProductNumber,
-	ListPrice,
-	ModifiedDate
-from SalesLT.Product
-FOR XML PATH('Product'), ROOT ('Products')
-
-select
 	PC.ProductCategoryID AS [@ProductCategoryID],
 	PC.Name AS [@Name],
 	(select
